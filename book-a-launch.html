@@ -18,8 +18,20 @@
 
             .dropdown-button-addon::after {
                 content: none;
-                border: 0;
-                border-width: 0;
+                border-top-width: 0px;
+                border-left-width: 0px;
+                border-right-width: 0px;
+                border-bottom-width: 2px !important; 
+                border-bottom-color: rgb(74, 74, 74) !important; 
+            }
+
+            .dropdown-button-addon {
+                
+                border-top-width: 0px;
+                border-left-width: 0px;
+                border-right-width: 0px;
+                border-bottom-width: 2px !important; 
+                border-bottom-color: rgb(74, 74, 74) !important; 
             }
 
             .custom-text-input {
@@ -106,12 +118,14 @@
                                 <br>
                                 <input type="email" class="form-control custom-text-input w-50" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="EMAIL">
                             </div>
-                            <div class="form-group d-flex justify-content-center my-4">
+                            <div class="form-group d-flex my-4" style="margin-left:25%">
                                 <br>
-                                <select type="email" class="form-control custom-text-input w-50" style="color:rgb(151, 151, 151)" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="LAUNCH VEHICLE">
-                                    <option style="background-color:black;font-family:'Nunito';color:rgb(151, 151, 151)" selected disabled>LAUNCH VEHICLE</option>
-                                    <option style="background-color:black;font-family:'Nunito';color:rgb(151, 151, 151)">ASTRAEUS</option>
-                                </select>
+                                <div class="dropdown w-100" style="padding-right: 33%;">
+                                    <button class="nav-item text-start my-0 dropdown-toggle border-bottom dropdown-button-addon w-100 " style="background-color:rgba(0, 0, 0, 0);font-family: 'Nunito';font-family:'Nunito';border-top-width:0px; border-left-width: 0px; border-right-width: 0px;text-decoration: none;color:rgb(151, 151, 151);border-bottom-color:rgb(74, 74, 74);border-bottom-width: 1px;" type="button" id="AboutDropdownToggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&nbsp;LAUNCH VEHICLES</button>
+                                    <ul class="dropdown-menu mx-auto" style="background-color: black;transform: translateX(-50%);left:50%;box-shadow: 0px 0px 3px black;font-size:small;border-radius: 0px;" aria-labelledby="AboutDropdownToggle">
+                                        <li><a class="dropdown-item text-white dropdown-item-addon px-5 py-2" style="font-family:'Nunito';" href="aboutus.html">ASTRAEUS</a></li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="form-group d-flex justify-content-center my-4">
                                 <br>
