@@ -32,13 +32,23 @@
                 border-bottom-color: rgb(74, 74, 74);
                 background-color:rgba(0, 0, 0, 0);
                 border-radius:0px;
-
+                
                 color:rgb(151, 151, 151)
             }
 
             .custom-text-input::placeholder {
                 color:rgb(151, 151, 151);
                 font-family:'Nunito';
+                
+                
+            }
+
+            .custom-text-input:focus::placeholder {
+
+                transition: transform 1s;
+
+                transform-origin: top left;
+                transform: matrix(0.75, 0, 0, 0.75, 0, -10);
             }
 
             .custom-text-input:focus {
@@ -56,6 +66,8 @@
 
             }
 
+            
+
         </style>
 
     </head>
@@ -71,7 +83,7 @@
                     <h3 class="text-white text-center" style="font-family:'Nunito'">ENTER YOUR DETAILS</h3>
                 </div>
             </div>
-            <div class="row"">
+            <div class="row">
                 <div class="col-sm">
                     <div style="background: rgba(76, 175, 80, 0)">
                         <form class="px-5">
@@ -80,7 +92,7 @@
                             </div>
                             <div class="form-group d-flex justify-content-center my-4">
                                 <br>
-                                <input type="text" class="form-control custom-text-input w-50" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="DISCORD USERNAME + DISCRIMINATOR">
+                                <input type="text" class="form-control custom-text-input w-50" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="DISCORD USERNAME + TAG">
                             </div>
                             <div class="form-group d-flex justify-content-center my-4">
                                 <input type="text" class="form-control custom-text-input w-50" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="COMPANY / ORGANIZATION (OPTIONAL)">
@@ -108,6 +120,10 @@
                             <div class="form-group d-flex justify-content-center my-4">
                                 <br>
                                 <input type="email" class="form-control custom-text-input w-50" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="PAYLOAD MASS">
+                            </div>
+                            <div class="form-group d-flex justify-content-center my-4">
+                                <br>
+                                <textarea class="form-control custom-text-input w-50" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="TELL US SOMETHING ABOUT YOUR PAYLOAD" style="resize:none" rows="5" cols="14"></textarea>
                             </div>
                             <br>
                             
