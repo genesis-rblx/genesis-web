@@ -41,11 +41,14 @@
                 font-family:'Nunito';
                 
                 
+                
             }
 
             .custom-text-input:focus::placeholder {
 
-                transition: transform 1s;
+                transition-property: color,transform;
+                transition-duration: 0.5s;
+                color:rgb(255, 79, 79);
 
                 transform-origin: top left;
                 transform: matrix(0.75, 0, 0, 0.75, 0, -10);
@@ -57,15 +60,19 @@
                 border-right: none;
                 border-left: none;
 
+                transition: border-bottom-color 0.5s;
+                
                 border-bottom-width: 1px;
-                border-bottom-color: rgb(74, 74, 74);
+                border-bottom-color: rgb(255, 111, 111);
                 background-color:rgba(0, 0, 0, 0);
                 border-radius:0px;
 
-                color:rgb(151, 151, 151)
-
+                color:rgb(255, 79, 79);
+                outline: none;
+                box-shadow: none;
             }
 
+            
             
 
         </style>
