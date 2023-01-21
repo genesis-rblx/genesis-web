@@ -23,3 +23,14 @@ function postFormData() {
     xhr.send(JSON.stringify(formData));
     window.location.href = "index.html"
 }
+
+function updateAgreementButtonAnim(divid, textid, buttonid) {
+    const div = document.getElementById(divid)
+    const text = document.getElementById(textid)
+    const button = document.getElementById(buttonid)
+
+    button.style.borderColor = "rgb(255, 111, 111)";
+    button.style.backgroundColor = "rgb(255, 111, 111)";
+    text.style.color = "rgb(255, 79, 79)";
+    div.style.borderColor= "rgb(255, 111, 111)";
+}

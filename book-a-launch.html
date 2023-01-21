@@ -127,6 +127,7 @@
                                     </ul>
                                 </div>
                             </div>
+                    
                             <div class="form-group d-flex justify-content-center my-4">
                                 <br>
                                 <input type="email" class="form-control custom-text-input w-50" id="TargetLaunchDate" aria-describedby="emailHelp" placeholder="TARGET LAUNCH DATE">
@@ -152,13 +153,13 @@
                                 <textarea class="form-control custom-text-input w-50" id="PayloadDesc" aria-describedby="emailHelp" placeholder="TELL US SOMETHING ABOUT YOUR PAYLOAD" style="resize:none" rows="5" cols="14"></textarea>
                             </div>
                             <br>
-                            <div class="form-group d-flex flex-column my-4 justify-content-between p-5" style="border: 1px solid rgb(74, 74, 74)">
-                                <h6 class="mx-auto" style="font-family:'Nunito';color: rgb(151, 151, 151)">&nbsp;Do you agree that, at any time, your payload can be delayed if the team for whatsoever reason decides that your selected launch date is unable to be aimed at?</h6>
-                                <button class="btn btn-secondary mx-auto mt-4" style="border-width:2px;font-family:'Nunito';font-size:smaller;background-color:black;border-color: rgb(74, 74, 74)">I AGREE</button>
+                            <div class="form-group d-flex flex-column my-4 justify-content-between p-5" id="da-1" style="border: 1px solid rgb(74, 74, 74);transition: all 0.5s;">
+                                <h6 class="mx-auto" style="font-family:'Nunito';color: rgb(151, 151, 151);transition: all 0.5s;" id="ti-1">&nbsp;Do you agree that, at any time, your payload can be delayed if the team for whatsoever reason decides that your selected launch date is unable to be aimed at?</h6>
+                                <button type="button" class="btn btn-secondary mx-auto mt-4" id="bi-1" onclick="updateAgreementButtonAnim('da-1', 'ti-1', 'bi-1')" style="transition: all 0.5s;border-width:2px;font-family:'Nunito';font-size:smaller;background-color:black;border-color: rgb(74, 74, 74)">I AGREE</button>
                             </div>
-                            <div class="form-group d-flex flex-column my-4 justify-content-evenly p-5" style="border: 1px solid rgb(74, 74, 74)">
-                                <h6 class="mx-auto" style="font-family:'Nunito';color: rgb(151, 151, 151)">&nbsp;Do you agree that, if your payload contains innapropiate models which are against Roblox Terms of Service, the teams have the right to punish you accordingly and deny your request?</h6>
-                                <button class="btn btn-secondary mx-auto mt-4" style="border-width:2px;font-family:'Nunito';font-size:smaller;background-color:black;border-color: rgb(74, 74, 74)">I AGREE</button>
+                            <div class="form-group d-flex flex-column my-4 justify-content-evenly p-5" id="da-2" style="border: 1px solid rgb(74, 74, 74);transition: all 0.5s;">
+                                <h6 class="mx-auto" style="font-family:'Nunito';color: rgb(151, 151, 151);transition: all 0.5s;" id="ti-2">&nbsp;Do you agree that, if your payload contains innapropiate models which are against Roblox Terms of Service, the teams have the right to punish you accordingly and deny your request?</h6>
+                                <button type="button" class="btn btn-secondary mx-auto mt-4" id="bi-2" onclick="updateAgreementButtonAnim('da-2', 'ti-2', 'bi-2')" style="transition: all 0.5s;border-width:2px;font-family:'Nunito';font-size:smaller;background-color:black;border-color: rgb(74, 74, 74)">I AGREE</button>
                             </div>
                             
                         </form>
