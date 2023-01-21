@@ -12,13 +12,6 @@ function postFormData() {
   
     
     xhr.open("POST", "https://genesiswebsiteservice.shaperorblx.repl.co/", true);
-    
-    
-    xhr.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText);
-        }
-    }
 
     var formData = {};
         
@@ -28,4 +21,5 @@ function postFormData() {
 
     
     xhr.send(JSON.stringify(formData));
+    window.location.href = "index.html"
 }
