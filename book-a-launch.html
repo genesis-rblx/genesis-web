@@ -13,7 +13,7 @@
 
         <style>
             .dropdown-item-addon:hover {
-                background-color:black;
+                background-color: rgb(30, 30, 30);
             }
 
             .dropdown-button-addon::after {
@@ -21,7 +21,7 @@
                 border-top-width: 0px;
                 border-left-width: 0px;
                 border-right-width: 0px;
-                border-bottom-width: 2px !important; 
+                border-bottom-width: 1px !important; 
                 border-bottom-color: rgb(74, 74, 74) !important; 
             }
 
@@ -30,7 +30,7 @@
                 border-top-width: 0px;
                 border-left-width: 0px;
                 border-right-width: 0px;
-                border-bottom-width: 2px !important; 
+                border-bottom-width: 1px !important; 
                 border-bottom-color: rgb(74, 74, 74) !important; 
             }
 
@@ -122,8 +122,8 @@
                                 <br>
                                 <div class="dropdown w-100" style="padding-right: 33%;">
                                     <button class="nav-item text-start my-0 dropdown-toggle border-bottom dropdown-button-addon w-100 " style="background-color:rgba(0, 0, 0, 0);font-family: 'Nunito';font-family:'Nunito';border-top-width:0px; border-left-width: 0px; border-right-width: 0px;text-decoration: none;color:rgb(151, 151, 151);border-bottom-color:rgb(74, 74, 74);border-bottom-width: 1px;" type="button" id="LaunchVehicleDropdownToggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&nbsp;LAUNCH VEHICLES</button>
-                                    <ul class="dropdown-menu mx-auto" style="background-color: black;transform: translateX(-50%);left:50%;box-shadow: 0px 0px 3px black;font-size:small;border-radius: 0px;padding-left:25%;padding-right:24%" aria-labelledby="LaunchVehicleDropdownToggle">
-                                        <li><button class="dropdown-item text-white dropdown-item-addon px-5 py-2" type="button" style="font-family:'Nunito';" onclick="updateFormDropdown('ASTRAEUS')">ASTRAEUS</button></li>
+                                    <ul class="dropdown-menu mx-auto" style="border-bottom-color: rgb(255, 111, 111);border-bottom-width:1px;background-color: black;background-color: rgb(30, 30, 30);transform: translateX(-50%);left:50%;box-shadow: 0px 0px 3px black;font-size:small;border-radius: 0px;padding-left:25%;padding-right:24%" aria-labelledby="LaunchVehicleDropdownToggle">
+                                        <li><button class="dropdown-item dropdown-item-addon px-5 py-2" type="button" style="font-family:'Nunito';color:rgb(151, 151, 151);" onclick="updateFormDropdown('ASTRAEUS', 'LaunchVehicleDropdownToggle')">ASTRAEUS</button></li>
                                     </ul>
                                 </div>
                             </div>
@@ -147,6 +147,16 @@
                             <div class="form-group d-flex justify-content-center my-4">
                                 <br>
                                 <input type="email" class="form-control custom-text-input w-50" id="Mass" aria-describedby="emailHelp" placeholder="PAYLOAD MASS">
+                            </div>
+                            <div class="form-group d-flex my-4" style="margin-left:25%">
+                                <br>
+                                <div class="dropdown w-100" style="padding-right: 33%;">
+                                    <button class="nav-item text-start my-0 dropdown-toggle border-bottom dropdown-button-addon w-100 " style="background-color:rgba(0, 0, 0, 0);font-family: 'Nunito';font-family:'Nunito';border-top-width:0px; border-left-width: 0px; border-right-width: 0px;text-decoration: none;color:rgb(151, 151, 151);border-bottom-color:rgb(74, 74, 74);border-bottom-width: 1px;" type="button" id="ExpansionBoolDropdownToggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&nbsp;DOES THE LAUNCH REQUIRE AN EXPANDABLE VARIANT OF BOOSTER?</button>
+                                    <ul class="dropdown-menu mx-auto" style="border-bottom-color: rgb(255, 111, 111);border-bottom-width:1px;background-color: black;background-color: rgb(30, 30, 30);transform: translateX(-50%);left:50%;box-shadow: 0px 0px 3px black;font-size:small;border-radius: 0px;padding-left:25%;padding-right:24%" aria-labelledby="ExpansionBoolDropdownToggle">
+                                        <li><button class="dropdown-item dropdown-item-addon px-5 py-2" type="button" style="font-family:'Nunito';color:rgb(151, 151, 151);border-bottom-color: rgb(255, 111, 111);border-bottom-width:1px;" onclick="updateFormDropdown('YES','ExpansionBoolDropdownToggle')">YES</button></li>
+                                        <li><button class="dropdown-item dropdown-item-addon px-5 py-2" type="button" style="font-family:'Nunito';color:rgb(151, 151, 151);" onclick="updateFormDropdown('NO','ExpansionBoolDropdownToggle')">NO</button></li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="form-group d-flex justify-content-center my-4">
                                 <br>

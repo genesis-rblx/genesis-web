@@ -1,5 +1,5 @@
-function updateFormDropdown(text) {
-    const button = document.getElementById('LaunchVehicleDropdownToggle')
+function updateFormDropdown(text, id) {
+    const button = document.getElementById(id)
     button.innerHTML = '&nbsp' + text
 }
 
