@@ -105,18 +105,18 @@
                     <div style="background: rgba(76, 175, 80, 0)">
                         <form class="px-5">
                             <div class="form-group d-flex justify-content-center">
-                                <input type="text" class="form-control custom-text-input w-50" id="Username" aria-describedby="emailHelp" placeholder="USERNAME">
+                                <input type="text" class="form-control custom-text-input w-50" id="Username" aria-describedby="emailHelp" placeholder="USERNAME" required>
                             </div>
                             <div class="form-group d-flex justify-content-center my-4">
                                 <br>
-                                <input type="text" class="form-control custom-text-input w-50" id="DiscordUsernameNTag" aria-describedby="emailHelp" placeholder="DISCORD USERNAME + TAG">
+                                <input type="text" class="form-control custom-text-input w-50" id="DiscordUsernameNTag" aria-describedby="emailHelp" placeholder="DISCORD USERNAME + TAG" required>
                             </div>
                             <div class="form-group d-flex justify-content-center my-4">
                                 <input type="text" class="form-control custom-text-input w-50" id="Company" aria-describedby="emailHelp" placeholder="COMPANY / ORGANIZATION (OPTIONAL)">
                             </div>
                             <div class="form-group d-flex justify-content-center my-4">
                                 <br>
-                                <input type="email" class="form-control custom-text-input w-50" id="Email" aria-describedby="emailHelp" placeholder="EMAIL">
+                                <input type="email" class="form-control custom-text-input w-50" id="Email" aria-describedby="emailHelp" placeholder="EMAIL" required>
                             </div>
                             <div class="form-group d-flex my-4" style="margin-left:25%">
                                 <br>
@@ -130,23 +130,23 @@
                     
                             <div class="form-group d-flex justify-content-center my-4">
                                 <br>
-                                <input type="email" class="form-control custom-text-input w-50" id="TargetLaunchDate" aria-describedby="emailHelp" placeholder="TARGET LAUNCH DATE">
+                                <input type="email" class="form-control custom-text-input w-50" id="TargetLaunchDate" aria-describedby="emailHelp" placeholder="TARGET LAUNCH DATE" required>
                             </div>
                             <div class="form-group d-flex justify-content-center my-4">
                                 <br>
-                                <input type="email" class="form-control custom-text-input w-50" id="PayloadReadyDate" aria-describedby="emailHelp" placeholder="PAYLOAD READINESS DATE">
+                                <input type="email" class="form-control custom-text-input w-50" id="PayloadReadyDate" aria-describedby="emailHelp" placeholder="PAYLOAD READINESS DATE" required>
                             </div>
                             <div class="form-group d-flex justify-content-center my-4">
                                 <br>
-                                <input type="email" class="form-control custom-text-input w-50" id="Inclination" aria-describedby="emailHelp" placeholder="INCLINATION (DEGREES)">
+                                <input type="email" class="form-control custom-text-input w-50" id="Inclination" aria-describedby="emailHelp" placeholder="INCLINATION (DEGREES)" required>
                             </div>
                             <div class="form-group d-flex justify-content-center my-4">
                                 <br>
-                                <input type="email" class="form-control custom-text-input w-50" id="Altitude" aria-describedby="emailHelp" placeholder="ALTITUDE (KM)">
+                                <input type="email" class="form-control custom-text-input w-50" id="Altitude" aria-describedby="emailHelp" placeholder="ALTITUDE (KM)" required>
                             </div>
                             <div class="form-group d-flex justify-content-center my-4">
                                 <br>
-                                <input type="email" class="form-control custom-text-input w-50" id="Mass" aria-describedby="emailHelp" placeholder="PAYLOAD MASS">
+                                <input type="email" class="form-control custom-text-input w-50" id="Mass" aria-describedby="emailHelp" placeholder="PAYLOAD MASS" required>
                             </div>
                             <div class="form-group d-flex my-4" style="margin-left:25%">
                                 <br>
@@ -171,7 +171,9 @@
                                 <h6 class="mx-auto" style="font-family:'Nunito';color: rgb(151, 151, 151);transition: all 0.5s;" id="ti-2">&nbsp;Do you agree that, if your payload contains innapropiate models which are against Roblox Terms of Service, the teams have the right to punish you accordingly and deny your request?</h6>
                                 <button type="button" class="btn btn-secondary mx-auto mt-4" id="bi-2" onclick="updateAgreementButtonAnim('da-2', 'ti-2', 'bi-2')" style="transition: all 0.5s;border-width:2px;font-family:'Nunito';font-size:smaller;background-color:black;border-color: rgb(74, 74, 74)">I AGREE</button>
                             </div>
-                            
+                            <div class="form-group d-flex justify-content-center my-4">
+                                <h5 id="errorMessagePresenter" style="font-family:'Nunito';color: rgb(255, 79, 79)"></h5>
+                            </div>
                         </form>
                     </div>
                 </div>
