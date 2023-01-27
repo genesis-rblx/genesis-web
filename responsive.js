@@ -1,4 +1,5 @@
 window.addEventListener('load', function(){
+    console.log('run')
     const CoverImage = document.getElementById('cover-image')
     const Navbar = document.getElementById('navbar')
 
