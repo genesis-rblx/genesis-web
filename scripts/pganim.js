@@ -6,6 +6,10 @@ window.onload = function()
         pageLoader.classList.add("anim-out")
     }, 1000)
 
-    setTimeout(() => {pageLoader.style.display = 'none'}, 1500)
-    
+    setTimeout(() => { pageLoader.style.visibility = 'hidden' }, 1500)
 };
+
+window.onbeforeunload = function() {
+    pageLoader.style.visibility = 'visible'
+    pageLoader.classList.add("anim-in")
+}
