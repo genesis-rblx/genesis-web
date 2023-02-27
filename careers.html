@@ -54,6 +54,26 @@
                 
             }
 
+            .searchbox {
+                background-color:rgb(30, 30, 30);
+                border:none;
+                color:white;
+                font-family:'Nunito';
+            }
+
+            .searchbox::placeholder {
+                font-family: 'Nunito';
+            }
+
+            .searchbutton {
+                background-color:rgb(30, 30, 30);
+                border:none;
+            }
+
+            .searchbutton:hover {
+                background-color:rgb(46, 46, 46)
+            }
+
         </style>
 
     </head>
@@ -107,7 +127,7 @@
                 <button class="nav-item text-white my-0 mx-auto dropdown-toggle dropdown-button-addon" style="background-color:black;font-family: 'Nunito';border:none" type="button" id="AboutDropdownToggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-family:'Nunito';text-decoration: none;">CAREERS</button>
                 <ul class="dropdown-menu my-3 mx-auto" style="background-color: rgb(30, 30, 30);transform: translateX(-50%);left:50%;font-size:small;;border-top-width:2px;border-top-color: rgb(255, 111, 111);border-radius: 0px;margin-top:40%;" aria-labelledby="AboutDropdownToggle">
                     <li><a class="dropdown-item text-white text-center dropdown-item-addon px-5" style="padding-top:10%;padding-bottom:10%;font-family:'Nunito';border-bottom: 1px solid rgb(46, 46, 46);font-size:small" >PART-TIME POSITIONS</a></li>
-                    <li><a class="dropdown-item text-white text-center dropdown-item-addon px-5" href="careers.html" style="padding-top:10%;padding-bottom:10%;font-family:'Nunito';border-bottom: 1px solid rgb(46, 46, 46);font-size:small" >FULL-TIME POSITIONS</a></li>
+                    <li><a class="dropdown-item text-white text-center dropdown-item-addon px-5" style="padding-top:10%;padding-bottom:10%;font-family:'Nunito';border-bottom: 1px solid rgb(46, 46, 46);font-size:small" >FULL-TIME POSITIONS</a></li>
                     <li><a class="dropdown-item text-white text-center dropdown-item-addon px-5" style="padding-top:10%;padding-bottom:10%;font-family:'Nunito';" >EXECUTIVE POSITIONS</a></li>
                 </ul>
             </div>
@@ -118,16 +138,56 @@
         </div>
         </nav>
 
-        <div style="position:relative;border-bottom: 1px solid red;" id="cover-image">
-            <img class="img-fluid" src="assets/indexcover_3.png" style="filter: brightness(80%);" height="50%" width="100%">
-            <h1 id="dsized-responsive" style="position:absolute;top:50%;left:50%;transform: translate(-50%, -50%);text-align:center;color:white;font-family:'Nulshock';font-size:40px;">
-                Genesis Space<br/>Reusability is the option
-            </h1>
+        <div class="d-flex justify-content-center align-items-center h-50 px-5" style="flex-direction:column;">
+            <h1 class="align-middle" style="color:white;font-family:'Nunito';">OPEN POSITIONS</h1>
+            <div class="container p-0 w-50 my-3">
+                <div class="row">
+                    <div class="col px-0">
+                        <input class="col searchbox" placeholder="    SEARCH CAREERS" type="text" style="width:100%;height:150%;outline:none;" >
+                    </div>
+                    <div class="col-sm-auto px-0">
+                        <button class="searchbutton" style="color:white;width:100%;height:150%">
+                            <img src="assets/search_icon.png" style="width:20%;height:60%">
+                        </button>
+                    </div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="container p-0 w-50 my-3">
+                <div class="row">
+                    <div class="col">
+                        <div class="dropdown w-100">
+                            <button class="nav-item text-start my-0 dropdown-toggle border-bottom dropdown-button-addon w-100 p-3" style="background-color:rgb(30, 30, 30);font-family: 'Nunito';font-family:'Nunito';border-top-width:0px; border-left-width: 0px; border-right-width: 0px;text-decoration: none;color:rgb(151, 151, 151);border-bottom-color:rgb(74, 74, 74);border-bottom-width: 1px;text-align: center;" type="button" id="FilterDepartment" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&nbsp;Department</button>
+                            <ul class="dropdown-menu mx-auto" style="border-bottom-color: rgb(255, 111, 111);border-bottom-width:1px;background-color: black;background-color: rgb(30, 30, 30);transform: translateX(-50%);left:50%;font-size:small;border-radius: 0px;padding-left:25%;padding-right:24%" aria-labelledby="LaunchVehicleDropdownToggle">
+                                <li><button class="dropdown-item dropdown-item-addon px-5 py-2" type="button" style="font-family:'Nunito';color:rgb(151, 151, 151);" onclick="updateFormDropdown('Manufacturing Department', 'FilterDepartment')">Manufacturing Department</button></li>
+                                <li><button class="dropdown-item dropdown-item-addon px-5 py-2" type="button" style="font-family:'Nunito';color:rgb(151, 151, 151);" onclick="updateFormDropdown('Manufacturing Department', 'FilterDepartment')">Avionics Department</button></li>
+                                <li><button class="dropdown-item dropdown-item-addon px-5 py-2" type="button" style="font-family:'Nunito';color:rgb(151, 151, 151);" onclick="updateFormDropdown('Manufacturing Department', 'FilterDepartment')">Programming Department</button></li>
+                                <li><button class="dropdown-item dropdown-item-addon px-5 py-2" type="button" style="font-family:'Nunito';color:rgb(151, 151, 151);" onclick="updateFormDropdown('Manufacturing Department', 'FilterDepartment')">Media Department</button></li>
+                                <li><button class="dropdown-item dropdown-item-addon px-5 py-2" type="button" style="font-family:'Nunito';color:rgb(151, 151, 151);" onclick="updateFormDropdown('Manufacturing Department', 'FilterDepartment')">Testing Operations</button></li>
+                            
+                            
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="dropdown w-100">
+                            <button class="nav-item text-start my-0 dropdown-toggle border-bottom dropdown-button-addon w-100 p-3" style="background-color:rgb(30,30,30);font-family: 'Nunito';font-family:'Nunito';border-top-width:0px; border-left-width: 0px; border-right-width: 0px;text-decoration: none;color:rgb(151, 151, 151);border-bottom-color:rgb(74, 74, 74);border-bottom-width: 1px;" type="button" id="FilterLocation" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&nbsp;Location</button>
+                            <ul class="dropdown-menu mx-auto" style="border-bottom-color: rgb(255, 111, 111);border-bottom-width:1px;background-color: black;background-color: rgb(30, 30, 30);transform: translateX(-50%);left:50%;font-size:small;border-radius: 0px;padding-left:25%;padding-right:24%" aria-labelledby="LaunchVehicleDropdownToggle">
+                                <li><button class="dropdown-item dropdown-item-addon px-5 py-2" type="button" style="font-family:'Nunito';color:rgb(151, 151, 151);" onclick="updateFormDropdown('California, HQ', 'FilterLocation')">California, HQ</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        
         
         
         <script src="scripts/navbar.js"></script>
-        <script src="scripts/responsive.js"></script>
         <script src="scripts/pganim.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     </body>
