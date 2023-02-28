@@ -35,7 +35,7 @@
 
             @font-face {
                 font-family: 'Nulshock';
-                src: url('assets/nulshock\ bd.otf') format('opentype');
+                src: url('assets/NulshockLt.woff') format('woff');
             }
 
             .anim-out {
@@ -163,10 +163,10 @@
                             <button class="nav-item text-start my-0 dropdown-toggle border-bottom dropdown-button-addon w-100 p-3" style="background-color:rgb(30, 30, 30);font-family: 'Nunito';font-family:'Nunito';border-top-width:0px; border-left-width: 0px; border-right-width: 0px;text-decoration: none;color:rgb(151, 151, 151);border-bottom-color:rgb(74, 74, 74);border-bottom-width: 1px;text-align: center;" type="button" id="FilterDepartment" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&nbsp;Department</button>
                             <ul class="dropdown-menu mx-auto" style="border-bottom-color: rgb(255, 111, 111);border-bottom-width:1px;background-color: black;background-color: rgb(30, 30, 30);transform: translateX(-50%);left:50%;font-size:small;border-radius: 0px;padding-left:25%;padding-right:24%" aria-labelledby="LaunchVehicleDropdownToggle">
                                 <li><button class="dropdown-item dropdown-item-addon px-5 py-2" type="button" style="font-family:'Nunito';color:rgb(151, 151, 151);" onclick="updateFormDropdown('Manufacturing Department', 'FilterDepartment')">Manufacturing Department</button></li>
-                                <li><button class="dropdown-item dropdown-item-addon px-5 py-2" type="button" style="font-family:'Nunito';color:rgb(151, 151, 151);" onclick="updateFormDropdown('Manufacturing Department', 'FilterDepartment')">Avionics Department</button></li>
-                                <li><button class="dropdown-item dropdown-item-addon px-5 py-2" type="button" style="font-family:'Nunito';color:rgb(151, 151, 151);" onclick="updateFormDropdown('Manufacturing Department', 'FilterDepartment')">Programming Department</button></li>
-                                <li><button class="dropdown-item dropdown-item-addon px-5 py-2" type="button" style="font-family:'Nunito';color:rgb(151, 151, 151);" onclick="updateFormDropdown('Manufacturing Department', 'FilterDepartment')">Media Department</button></li>
-                                <li><button class="dropdown-item dropdown-item-addon px-5 py-2" type="button" style="font-family:'Nunito';color:rgb(151, 151, 151);" onclick="updateFormDropdown('Manufacturing Department', 'FilterDepartment')">Testing Operations</button></li>
+                                <li><button class="dropdown-item dropdown-item-addon px-5 py-2" type="button" style="font-family:'Nunito';color:rgb(151, 151, 151);" onclick="updateFormDropdown('Avionics Department', 'FilterDepartment')">Avionics Department</button></li>
+                                <li><button class="dropdown-item dropdown-item-addon px-5 py-2" type="button" style="font-family:'Nunito';color:rgb(151, 151, 151);" onclick="updateFormDropdown('Programming Department', 'FilterDepartment')">Programming Department</button></li>
+                                <li><button class="dropdown-item dropdown-item-addon px-5 py-2" type="button" style="font-family:'Nunito';color:rgb(151, 151, 151);" onclick="updateFormDropdown('Media Department', 'FilterDepartment')">Media Department</button></li>
+                                <li><button class="dropdown-item dropdown-item-addon px-5 py-2" type="button" style="font-family:'Nunito';color:rgb(151, 151, 151);" onclick="updateFormDropdown('Testing Operations', 'FilterDepartment')">Testing Operations</button></li>
                             
                             
                             </ul>
@@ -177,6 +177,8 @@
                             <button class="nav-item text-start my-0 dropdown-toggle border-bottom dropdown-button-addon w-100 p-3" style="background-color:rgb(30,30,30);font-family: 'Nunito';font-family:'Nunito';border-top-width:0px; border-left-width: 0px; border-right-width: 0px;text-decoration: none;color:rgb(151, 151, 151);border-bottom-color:rgb(74, 74, 74);border-bottom-width: 1px;" type="button" id="FilterLocation" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&nbsp;Location</button>
                             <ul class="dropdown-menu mx-auto" style="border-bottom-color: rgb(255, 111, 111);border-bottom-width:1px;background-color: black;background-color: rgb(30, 30, 30);transform: translateX(-50%);left:50%;font-size:small;border-radius: 0px;padding-left:25%;padding-right:24%" aria-labelledby="LaunchVehicleDropdownToggle">
                                 <li><button class="dropdown-item dropdown-item-addon px-5 py-2" type="button" style="font-family:'Nunito';color:rgb(151, 151, 151);" onclick="updateFormDropdown('California, HQ', 'FilterLocation')">California, HQ</button></li>
+                                <li><button class="dropdown-item dropdown-item-addon px-5 py-2" type="button" style="font-family:'Nunito';color:rgb(151, 151, 151);" onclick="updateFormDropdown('North Carolina, LC-1', 'FilterLocation')">North Carolina, LC-1</button></li>
+                                <li><button class="dropdown-item dropdown-item-addon px-5 py-2" type="button" style="font-family:'Nunito';color:rgb(151, 151, 151);" onclick="updateFormDropdown('Florida, Testing Facility', 'FilterLocation')">Florida, Testing Facility</button></li>
                             </ul>
                         </div>
                     </div>
@@ -185,6 +187,222 @@
         </div>
 
         
+
+        <div class="container">
+            <div class="row my-4"><h4 style="font-family:'Nunito';color:white;">OPEN POSITIONS IN ALL DEPARTMENTS</h4></div>
+            <div class="row">
+                <div class="col">
+                    <h6 style="font-family:'Nunito';color:white;"><b>JOB TITLE</b></h6>
+                </div>
+                <div class="col">
+                    <h6 style="font-family:'Nunito';color:white;"><b>LOCATION</b></h6>
+                </div>
+                <div class="col">
+                    <h6 style="font-family:'Nunito';color:white;"><b>DEPARTMENT</b></h6>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container py-3">
+            <div class="row my-4" style="border-bottom: 1px solid rgb(74, 74, 74);">
+                <div class="col">
+                    <a><button style="border:none;background-color:rgba(0, 0, 0, 0)"><h5 style="font-family:'Nunito';color:white;">Manufacturing Engineer</h5></button></a>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">Flexible</h5>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">Manufacturing Department</h5>
+                </div>
+            </div>
+            <div class="row my-4" style="border-bottom: 1px solid rgb(74, 74, 74);">
+                <div class="col">
+                    <a><button style="border:none;background-color:rgba(0, 0, 0, 0)"><h5 style="font-family:'Nunito';color:white;">Lead Manufacturing Engineer</h5></button></a>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">Flexible</h5>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">Manufacturing Department</h5>
+                </div>
+            </div>
+            <div class="row my-4" style="border-bottom: 1px solid rgb(74, 74, 74);">
+                <div class="col">
+                    <a><button style="border:none;background-color:rgba(0, 0, 0, 0)"><h5 style="font-family:'Nunito';color:white;">Software Engineer</h5></button></a>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">Remote</h5>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">Avionics Department</h5>
+                </div>
+            </div>
+            <div class="row my-4" style="border-bottom: 1px solid rgb(74, 74, 74);">
+                <div class="col">
+                    <a><button style="border:none;background-color:rgba(0, 0, 0, 0)"><h5 style="font-family:'Nunito';color:white;">Software Engineer</h5></button></a>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">North Carolina, LC-1</h5>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">Avionics Department</h5>
+                </div>
+            </div>
+            <div class="row my-4" style="border-bottom: 1px solid rgb(74, 74, 74);">
+                <div class="col">
+                    <a><button style="border:none;background-color:rgba(0, 0, 0, 0)"><h5 style="font-family:'Nunito';color:white;">Programmer</h5></button></a>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">Remote</h5>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">Programming Department</h5>
+                </div>
+            </div>
+            <div class="row my-4" style="border-bottom: 1px solid rgb(74, 74, 74);">
+                <div class="col">
+                    <a><button style="border:none;background-color:rgba(0, 0, 0, 0)"><h5 style="font-family:'Nunito';color:white;">Lead Programmer</h5></button></a>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">Remote</h5>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">Programming Department</h5>
+                </div>
+            </div>
+            <div class="row my-4" style="border-bottom: 1px solid rgb(74, 74, 74);">
+                <div class="col">
+                    <a><button style="border:none;background-color:rgba(0, 0, 0, 0)"><h5 style="font-family:'Nunito';color:white;">Vehicle Systems Operator</h5></button></a>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">California, HQ</h5>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">Launch Control Operations</h5>
+                </div>
+            </div>
+            <div class="row my-4" style="border-bottom: 1px solid rgb(74, 74, 74);">
+                <div class="col">
+                    <a><button style="border:none;background-color:rgba(0, 0, 0, 0)"><h5 style="font-family:'Nunito';color:white;">Operations Safety Officer</h5></button></a>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">California, HQ</h5>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">Launch Control Operations</h5>
+                </div>
+            </div>
+            <div class="row my-4" style="border-bottom: 1px solid rgb(74, 74, 74);">
+                <div class="col">
+                    <a><button style="border:none;background-color:rgba(0, 0, 0, 0)"><h5 style="font-family:'Nunito';color:white;">Operations Director</h5></button></a>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">California, HQ</h5>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">Launch Control Operations</h5>
+                </div>
+            </div>
+            <div class="row my-4" style="border-bottom: 1px solid rgb(74, 74, 74);">
+                <div class="col">
+                    <a><button style="border:none;background-color:rgba(0, 0, 0, 0)"><h5 style="font-family:'Nunito';color:white;">Ground Systems Officer</h5></button></a>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">California, HQ</h5>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">Launch Control Operations</h5>
+                </div>
+            </div>
+            <div class="row my-4" style="border-bottom: 1px solid rgb(74, 74, 74);">
+                <div class="col">
+                    <a><button style="border:none;background-color:rgba(0, 0, 0, 0)"><h5 style="font-family:'Nunito';color:white;">Technical Quality Lead Officer</h5></button></a>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">North Carolina, LC-1</h5>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">Quality Assurance</h5>
+                </div>
+            </div>
+            <div class="row my-4" style="border-bottom: 1px solid rgb(74, 74, 74);">
+                <div class="col">
+                    <a><button style="border:none;background-color:rgba(0, 0, 0, 0)"><h5 style="font-family:'Nunito';color:white;">Technical Quality Officer</h5></button></a>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">North Carolina, LC-1</h5>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">Quality Assurance</h5>
+                </div>
+            </div>
+            <div class="row my-4" style="border-bottom: 1px solid rgb(74, 74, 74);">
+                <div class="col">
+                    <a><button style="border:none;background-color:rgba(0, 0, 0, 0)"><h5 style="font-family:'Nunito';color:white;">Technical Quality Officer</h5></button></a>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">Florida, Testing Facility</h5>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">Quality Assurance</h5>
+                </div>
+            </div>
+            <div class="row my-4" style="border-bottom: 1px solid rgb(74, 74, 74);">
+                <div class="col">
+                    <a><button style="border:none;background-color:rgba(0, 0, 0, 0)"><h5 style="font-family:'Nunito';color:white;">Testing Operations Lead Engineer</h5></button></a>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">Florida, Testing Facility</h5>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">Testing Operations</h5>
+                </div>
+            </div>
+            <div class="row my-4" style="border-bottom: 1px solid rgb(74, 74, 74);">
+                <div class="col">
+                    <a><button style="border:none;background-color:rgba(0, 0, 0, 0)"><h5 style="font-family:'Nunito';color:white;">Testing Operations Engineer</h5></button></a>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">Florida, Testing Facility</h5>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">Testing Operations</h5>
+                </div>
+            </div>
+            <div class="row my-4" style="border-bottom: 1px solid rgb(74, 74, 74);">
+                <div class="col">
+                    <a><button style="border:none;background-color:rgba(0, 0, 0, 0)"><h5 style="font-family:'Nunito';color:white;">Testing Operations Supervisor</h5></button></a>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">Florida, Testing Facility</h5>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">Testing Operations</h5>
+                </div>
+            </div>
+            <div class="row my-4" style="border-bottom: 1px solid rgb(74, 74, 74);">
+                <div class="col">
+                    <a><button style="border:none;background-color:rgba(0, 0, 0, 0)"><h5 style="font-family:'Nunito';color:white;">Stream Manager</h5></button></a>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">California, HQ</h5>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">Media Department</h5>
+                </div>
+            </div>
+            <div class="row my-4" style="border-bottom: 1px solid rgb(74, 74, 74);">
+                <div class="col">
+                    <a><button style="border:none;background-color:rgba(0, 0, 0, 0)"><h5 style="font-family:'Nunito';color:white;">Broadcast Stream Commentator</h5></button></a>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">California, HQ</h5>
+                </div>
+                <div class="col">
+                    <h5 style="font-family:'Nunito';color:rgb(151, 151, 151)">Media Department</h5>
+                </div>
+            </div>
+        </div>
         
         
         <script src="scripts/navbar.js"></script>
