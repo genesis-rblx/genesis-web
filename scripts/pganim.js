@@ -1,5 +1,5 @@
 const pageLoader = document.getElementById('loadingScreen')
-window.onload = function()
+window.onpageshow = function()
 {
 
     setTimeout(function(){
