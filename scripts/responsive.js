@@ -1,4 +1,4 @@
-window.addEventListener('load', function(){
+window.addEventListener('pageshow', function(){
     
     const CoverImage = document.getElementById('cover-image')
     const Navbar = document.getElementById('navbar')
