@@ -68,7 +68,7 @@
                 <h5 style="font-family:'Nulshock';color:rgb(0, 0, 0);margin-bottom: 0em;">Genesis Space</h5>
             </div>
 
-            <a class="mx-auto" href="book-a-launch.html"><button class="btn" href="book-a-launch.html" style="color:white;border-radius:0px;border-width:3px;font-family:'Nunito';font-size:small;background-color:rgb(6, 68, 161)">APPLY NOW</button></a>
+            <a class="mx-auto"><button class="btn" onclick="scroll_applyform()" href="book-a-launch.html" style="color:white;border-radius:0px;border-width:3px;font-family:'Nunito';font-size:small;background-color:rgb(6, 68, 161)">APPLY NOW</button></a>
 
         </div>
         </nav>
@@ -196,7 +196,7 @@
             </div>
         </div>
 
-        <div class="container w-50 mx-5" style="background-color:rgb(242, 242, 242)">
+        <div class="container w-50 mx-5" style="background-color:rgb(242, 242, 242)" id="applicationFormHeading">
             <div class="row p-5">
                 <h4>Apply for this Job</h4>
             </div>
@@ -343,6 +343,67 @@
             </div>
             <hr>
             <div class="row px-5 my-2">
+                <div class="col d-flex justify-content-center">
+                    <h6>What are your pro's and cons?</h6>
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col d-flex justify-content-center p-0">
+                    <textarea style="width:75%">
+
+                    </textarea>
+                </div>  
+            </div>
+            <br>
+            <div class="row px-5 my-2">
+                <div class="col d-flex justify-content-center">
+                    <h6>Why are you applying for the Engineering Department position?</h6>
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col d-flex justify-content-center p-0">
+                    <textarea style="width:75%">
+
+                    </textarea>
+                </div>  
+            </div>
+            <br>
+            <div class="row px-5 my-2">
+                <div class="col d-flex justify-content-center">
+                    <h6>What is the role of an Engineer?</h6>
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col d-flex justify-content-center p-0">
+                    <textarea style="width:75%">
+
+                    </textarea>
+                </div>  
+            </div>
+            <br>
+            <div class="row px-5 my-2">
+                <div class="col d-flex justify-content-center">
+                    <h6>Rate your activity on a scale of 1 to 10.</h6>
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col d-flex justify-content-center p-0">
+                    <select>
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>  
+            </div>
+            <hr>
+            <div class="row px-5 my-2">
                 
                 <div class="col p-0">
                     <a class="mx-auto" href="book-a-launch.html"><button class="btn" href="book-a-launch.html" style="color:white;border-radius:0px;border-width:3px;font-family:'Nunito';font-size:small;background-color:rgb(6, 68, 161)">SUBMIT APPLICATION</button></a>
@@ -350,6 +411,13 @@
             </div>
             <hr>
         </div>
+
+        <script>
+            function scroll_applyform() {
+                const heading = document.getElementById("applicationFormHeading");
+                window.scrollTo(0, heading.getBoundingClientRect().top)
+            }
+        </script>
 
         <script>
             document.getElementById("navbar-logo").addEventListener("click", function(){
