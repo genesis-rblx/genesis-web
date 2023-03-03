@@ -205,7 +205,7 @@
                     <h6>ROBLOX Username</h6>
                 </div>
                 <div class="col-8 p-0">
-                    <input type="text" style="width:100%">
+                    <input type="text" id="robloxUsername" style="width:100%">
                 </div>                
             </div>
             <div class="row px-5 my-2">
@@ -213,7 +213,7 @@
                     <h6>Discord Username</h6>
                 </div>
                 <div class="col-8 p-0">
-                    <input type="text" style="width:100%">
+                    <input type="text" id="discordUsername" style="width:100%">
                 </div>                
             </div>
             <div class="row px-5 my-2">
@@ -221,7 +221,7 @@
                     <h6>Email</h6>
                 </div>
                 <div class="col-8 p-0">
-                    <input type="text" style="width:100%">
+                    <input type="text" id="Email" style="width:100%">
                 </div>                
             </div>
             <div class="row px-5 my-2">
@@ -229,7 +229,7 @@
                     <h6>Timezone</h6>
                 </div>
                 <div class="col-8 p-0">
-                    <input type="text" style="width:100%">
+                    <input type="text" id="Timezone" style="width:100%">
                 </div>                
             </div>
             <div class="row px-5 my-2">
@@ -237,7 +237,7 @@
                     <h6>Age</h6>
                 </div>
                 <div class="col-8 p-0" style="margin-bottom:5%">
-                    <input type="text" style="width:100%">
+                    <input type="text" id="Age" style="width:100%">
                 </div>                
             </div>
             <div class="row px-5 my-2">
@@ -245,7 +245,7 @@
                     <h6>Resume/CV (Link)</h6>
                 </div>
                 <div class="col-8 p-0">
-                    <input type="text" style="width:100%">
+                    <input type="text" id="linkResume" style="width:100%">
                 </div>                
             </div>
             <div class="row px-5 my-2">
@@ -253,7 +253,7 @@
                     <h6>Cover Letter (Link)</h6>
                 </div>
                 <div class="col-8 p-0" style="margin-bottom:5%">
-                    <input type="text" style="width:100%">
+                    <input type="text" id="linkCoverLetter" style="width:100%">
                 </div>                
             </div>
             <hr>
@@ -264,7 +264,7 @@
             </div>
             <div class="row my-2">
                 <div class="col d-flex justify-content-center p-0">
-                    <input type="text" style="width:75%">
+                    <input type="text" id="Experience" style="width:75%">
                 </div>  
             </div>
             <br>
@@ -275,10 +275,10 @@
             </div>
             <div class="row my-2">
                 <div class="col d-flex justify-content-center p-0">
-                    <select>
+                    <select id="metQualifications">
                         <option selected>Yes/No</option>
-                        <option value="1">Yes</option>
-                        <option value="2">No</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
                     </select>
                 </div>  
             </div>
@@ -296,7 +296,6 @@
                             California, HQ
                         </label>
                       </div>
-                    
                     
                 </div>  
             </div>
@@ -338,7 +337,7 @@
             </div>
             <div class="row my-2">
                 <div class="col d-flex justify-content-center p-0">
-                    <input type="text" style="width:75%">
+                    <input type="text" id="linkPortfolio" style="width:75%">
                 </div>  
             </div>
             <hr>
@@ -349,7 +348,7 @@
             </div>
             <div class="row my-2">
                 <div class="col d-flex justify-content-center p-0">
-                    <textarea style="width:75%">
+                    <textarea id="prosAndCons" style="width:75%">
 
                     </textarea>
                 </div>  
@@ -362,7 +361,7 @@
             </div>
             <div class="row my-2">
                 <div class="col d-flex justify-content-center p-0">
-                    <textarea style="width:75%">
+                    <textarea id="applicationReason" style="width:75%">
 
                     </textarea>
                 </div>  
@@ -375,7 +374,7 @@
             </div>
             <div class="row my-2">
                 <div class="col d-flex justify-content-center p-0">
-                    <textarea style="width:75%">
+                    <textarea id="roleOfEngineer" style="width:75%">
 
                     </textarea>
                 </div>  
@@ -388,7 +387,7 @@
             </div>
             <div class="row my-2">
                 <div class="col d-flex justify-content-center p-0">
-                    <select>
+                    <select id="activityRate">
                         <option value="1" selected>1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -406,7 +405,7 @@
             <div class="row px-5 my-2">
                 
                 <div class="col p-0">
-                    <a class="mx-auto" href="book-a-launch.html"><button class="btn" href="book-a-launch.html" style="color:white;border-radius:0px;border-width:3px;font-family:'Nunito';font-size:small;background-color:rgb(6, 68, 161)">SUBMIT APPLICATION</button></a>
+                    <a class="mx-auto"><button class="btn" onclick="postAppData()" style="color:white;border-radius:0px;border-width:3px;font-family:'Nunito';font-size:small;background-color:rgb(6, 68, 161)">SUBMIT APPLICATION</button></a>
                 </div>                
             </div>
             <hr>
@@ -426,6 +425,39 @@
             window.dispatchEvent( new Event('beforeunload'));
 
             });
+        </script>
+
+        <script>
+            function postAppData() {
+
+                var formData = {}
+                const xhr = new XMLHttpRequest();
+                xhr.open("POST", "https://genesiswebsiteservice.shaperorblx.repl.co/", true);
+
+                const mandatoryInput = [
+                    document.getElementById("robloxUsername"),
+                    document.getElementById("discordUsername"),
+                    document.getElementById("Email"),
+                    document.getElementById("Timezone"),
+                    document.getElementById("Age"),
+                    document.getElementById("linkResume"),
+                    document.getElementById("linkCoverLetter"),
+                    document.getElementById("Experience"),
+                    document.getElementById("metQualifications"),
+                    document.getElementById("linkPortfolio"),
+                    document.getElementById("applicationReason"),
+                    document.getElementById("prosAndCons"),
+                    document.getElementById("roleOfEngineer"),
+                    document.getElementById("activityRate")
+                ]
+
+                mandatoryInput.forEach(function(item, index){
+                    formData[item.id] = item.value
+                })
+
+                xhr.send(JSON.stringify(formData));
+
+            }
         </script>
 
         <script src="../scripts/pganim.js"></script>
