@@ -504,7 +504,7 @@
 
                 mandatoryInput.forEach(function(item, index){
 
-                    if (item.validity.valueMissing) {
+                    if (item.validity.valueMissing || item.value == "") {
                         validationBool = false
                     }
 
