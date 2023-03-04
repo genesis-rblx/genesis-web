@@ -402,6 +402,32 @@
                 </div>  
             </div>
             <hr>
+            <div class="row my-2">
+                <div class="col d-flex justify-content-center">
+                    <div class="p-3" id="dcv-1" style="background-color:rgb(0, 0, 0, 0); border: 1px rgb(128, 128, 128) solid;">
+                        <h6>Do you agree, that, at any time, your job application can be denied for different reasons?</h6>
+                        <br>
+                        <button class="btn" id="v-1" onclick="updateValidation('v-1', 'dcv-1')" style="transition: all 0.5s;margin-left:43.5%;border: 1px rgb(6, 68, 161) solid;border-radius:0;color:rgb(6, 68, 161)">
+                            I Agree
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row my-2">
+                <div class="col d-flex justify-content-center">
+                    <div class="p-3" id="dcv-2" style="background-color:rgb(0, 0, 0, 0); border: 1px rgb(128, 128, 128) solid;">
+                        <h6>Do you understand that it can take up to 48 hours for your job application to be reviewed?</h6>
+                        <br>
+                        <button class="btn" id="v-2" onclick="updateValidation('v-2', 'dcv-2')" style="transition: all 0.5s;margin-left:43.5%;border: 1px rgb(6, 68, 161) solid;border-radius:0;color:rgb(6, 68, 161)">
+                            I Agree
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+            <hr>
             <div class="row px-5 my-2">
                 
                 <div class="col p-0">
@@ -428,6 +454,24 @@
         </script>
 
         <script>
+
+            validators = {
+                'v-1': false,
+                'v-2': false
+            }
+
+            function updateValidation(id, customizeid) {
+                const element = document.getElementById(id)
+                const customizeElement = document.getElementById(customizeid)
+
+                validators[id] = true
+
+                element.style.backgroundColor = "rgb(6, 68, 161)"
+                element.style.color = "rgb(255, 255, 255)"
+
+                customizeElement.style.borderColor = "rgb(6, 68, 161)"
+            }
+
             function postAppData() {
 
                 var formData = {}
@@ -451,11 +495,32 @@
                     document.getElementById("activityRate")
                 ]
 
+                let validationBool = true
+                for (const [key, value] of Object.entries(validators)) {
+                    if (!value) {
+                        validationBool = false
+                    }
+                }
+
                 mandatoryInput.forEach(function(item, index){
+
+                    if (item.validity.valueMissing) {
+                        validationBool = false
+                    }
+
+                    if (!validationBool) {
+                        return
+                    }
+                
                     formData[item.id] = item.value
                 })
 
-                xhr.send(JSON.stringify(formData));
+                if (validationBool) {
+                    xhr.send(JSON.stringify(formData));
+                } else {
+                    console.warn("Invalid application")
+                }
+                
 
             }
         </script>
