@@ -517,6 +517,7 @@
 
                 if (validationBool) {
                     xhr.send(JSON.stringify(formData));
+                    window.location.href = "recieved.html"
                 } else {
                     console.log("Invalid application")
                 }
