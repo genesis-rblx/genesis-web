@@ -526,9 +526,18 @@
                     formData[item.id] = item.value
                 })
 
+                formData["callback"] = true
+
+                xhr.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        window.location.href = "recieved.html"
+                    }
+                };
+
+            
                 if (validationBool) {
                     xhr.send(JSON.stringify(formData));
-                    window.location.href = "recieved.html"
+                    
                 } else {
                     console.log("Invalid application")
                 }
