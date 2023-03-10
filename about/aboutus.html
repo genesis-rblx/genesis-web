@@ -35,12 +35,12 @@
 
             @font-face {
                 font-family: 'Nulshock';
-                src: url('assets/NulshockLt.woff') format('woff');
+                src: url('../assets/NulshockLt.woff') format('woff');
             }
 
             @font-face {
                 font-family: 'Arame-Mono';
-                src: url('assets/Arame-Mono.otf') format('opentype');
+                src: url('../assets/Arame-Mono.otf') format('opentype');
             }
 
             .anim-out {
@@ -76,8 +76,8 @@
             <div class="dropdown mx-auto">
                 <button class="nav-item text-white my-0 mx-auto dropdown-toggle dropdown-button-addon" style="background-color:black;font-family: 'Nunito';border:none" type="button" id="AboutDropdownToggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-family:'Nunito';text-decoration: none;">ABOUT</button>
                 <ul class="dropdown-menu my-3 mx-auto" style="background-color: rgb(30, 30, 30);transform: translateX(-50%);left:50%;font-size:small;border-top-width:2px;border-top-color: rgb(255, 111, 111);border-radius: 0px;margin-top:50%;" aria-labelledby="AboutDropdownToggle">
-                    <li><a href="about/aboutus.html" class="dropdown-item text-white text-center dropdown-item-addon px-5" style="padding-top:10%;padding-bottom:10%;font-family:'Nunito';border-bottom: 1px solid rgb(46, 46, 46);font-size:small">ABOUT US</a></li>
-                    <li><a href="about/team.html" class="dropdown-item text-white my-1 text-center dropdown-item-addon px-5" style="padding-top:10%;padding-bottom:10%;font-family:'Nunito';border-bottom: 1px solid rgb(46, 46, 46);font-size:small" href="#">EXECUTIVE TEAM</a></li>
+                    <li><a class="dropdown-item text-white text-center dropdown-item-addon px-5" style="padding-top:10%;padding-bottom:10%;font-family:'Nunito';border-bottom: 1px solid rgb(46, 46, 46);font-size:small">ABOUT US</a></li>
+                    <li><a class="dropdown-item text-white my-1 text-center dropdown-item-addon px-5" style="padding-top:10%;padding-bottom:10%;font-family:'Nunito';border-bottom: 1px solid rgb(46, 46, 46);font-size:small" href="#">EXECUTIVE TEAM</a></li>
                     <li><a class="dropdown-item text-white my-1 text-center dropdown-item-addon px-5" style="padding-top:10%;padding-bottom:10%;font-family:'Nunito';border-bottom: 1px solid rgb(46, 46, 46);font-size:small" href="#">COMMUNITY</a></li>
                     <li><a class="dropdown-item text-white text-center dropdown-item-addon px-5" style="padding-top:10%;padding-bottom:10%;font-family:'Nunito';" href="#">GALLERY</a></li>
                 </ul>
@@ -124,10 +124,33 @@
         </nav>
 
         <div style="position:relative;border-bottom: 1px solid red;" id="cover-image">
-            <img class="img-fluid" src="assets/indexcover_3.png" style="filter: brightness(80%);" height="50%" width="100%">
+            <img class="img-fluid" src="../assets/team_bg.png" style="filter: brightness(80%);" height="50%" width="100%">
             <h1 id="dsized-responsive" style="letter-spacing:10px;position:absolute;top:50%;left:50%;transform: translate(-50%, -50%);text-align:center;color:white;font-family:'Nulshock';font-size:40px;">
-                Genesis Space<br/>Reusability is the option
+                ABOUT US
             </h1>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col" style="border-bottom: 1px solid red;">
+                    <h1 class="p-5 m-5" style="text-align:center;font-family:'Nulshock';color:white">
+                        GENESIS IS AN END-TO-END SPACE COMPANY DELIVERING RELIABLE LAUNCH SERVICES, SPACECRAFT, SATELLITE COMPONENTS, AND ON-ORBIT MANAGEMENT.
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col" style="border-bottom: 1px solid red;border-right: 1px solid red;">
+                    <p class="p-5" style="color:white;font-family:'Nunito'">
+                        Space has defined some of humanity's greatest achievements and it continues to shape our future. A future that Genesis is engineering into reality.
+                    </p>
+                </div>
+                <div class="col" style="border-bottom: 1px solid red;">
+
+                </div>
+            </div>
         </div>
 
         <div class="container-fluid">
@@ -179,9 +202,9 @@
         </div>
         
         
-        <script src="scripts/navbar.js"></script>
-        <script src="scripts/responsive.js"></script>
-        <script src="scripts/pganim.js"></script>
+        <script src="../scripts/navbar.js"></script>
+        <script src="../scripts/responsive.js"></script>
+        <script src="../scripts/pganim.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     </body>
 </html>

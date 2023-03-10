@@ -35,12 +35,12 @@
 
             @font-face {
                 font-family: 'Nulshock';
-                src: url('assets/NulshockLt.woff') format('woff');
+                src: url('../assets/NulshockLt.woff') format('woff');
             }
 
             @font-face {
                 font-family: 'Arame-Mono';
-                src: url('assets/Arame-Mono.otf') format('opentype');
+                src: url('../assets/Arame-Mono.otf') format('opentype');
             }
 
             .anim-out {
@@ -76,8 +76,8 @@
             <div class="dropdown mx-auto">
                 <button class="nav-item text-white my-0 mx-auto dropdown-toggle dropdown-button-addon" style="background-color:black;font-family: 'Nunito';border:none" type="button" id="AboutDropdownToggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-family:'Nunito';text-decoration: none;">ABOUT</button>
                 <ul class="dropdown-menu my-3 mx-auto" style="background-color: rgb(30, 30, 30);transform: translateX(-50%);left:50%;font-size:small;border-top-width:2px;border-top-color: rgb(255, 111, 111);border-radius: 0px;margin-top:50%;" aria-labelledby="AboutDropdownToggle">
-                    <li><a href="about/aboutus.html" class="dropdown-item text-white text-center dropdown-item-addon px-5" style="padding-top:10%;padding-bottom:10%;font-family:'Nunito';border-bottom: 1px solid rgb(46, 46, 46);font-size:small">ABOUT US</a></li>
-                    <li><a href="about/team.html" class="dropdown-item text-white my-1 text-center dropdown-item-addon px-5" style="padding-top:10%;padding-bottom:10%;font-family:'Nunito';border-bottom: 1px solid rgb(46, 46, 46);font-size:small" href="#">EXECUTIVE TEAM</a></li>
+                    <li><a class="dropdown-item text-white text-center dropdown-item-addon px-5" style="padding-top:10%;padding-bottom:10%;font-family:'Nunito';border-bottom: 1px solid rgb(46, 46, 46);font-size:small">ABOUT US</a></li>
+                    <li><a class="dropdown-item text-white my-1 text-center dropdown-item-addon px-5" style="padding-top:10%;padding-bottom:10%;font-family:'Nunito';border-bottom: 1px solid rgb(46, 46, 46);font-size:small" href="#">EXECUTIVE TEAM</a></li>
                     <li><a class="dropdown-item text-white my-1 text-center dropdown-item-addon px-5" style="padding-top:10%;padding-bottom:10%;font-family:'Nunito';border-bottom: 1px solid rgb(46, 46, 46);font-size:small" href="#">COMMUNITY</a></li>
                     <li><a class="dropdown-item text-white text-center dropdown-item-addon px-5" style="padding-top:10%;padding-bottom:10%;font-family:'Nunito';" href="#">GALLERY</a></li>
                 </ul>
@@ -124,52 +124,133 @@
         </nav>
 
         <div style="position:relative;border-bottom: 1px solid red;" id="cover-image">
-            <img class="img-fluid" src="assets/indexcover_3.png" style="filter: brightness(80%);" height="50%" width="100%">
+            <img class="img-fluid" src="../assets/team_bg.png" style="filter: brightness(80%);" height="50%" width="100%">
             <h1 id="dsized-responsive" style="letter-spacing:10px;position:absolute;top:50%;left:50%;transform: translate(-50%, -50%);text-align:center;color:white;font-family:'Nulshock';font-size:40px;">
-                Genesis Space<br/>Reusability is the option
+                OUR TEAM
             </h1>
         </div>
 
         <div class="container-fluid">
-            <div class="row my-5">
+            <div class="row">
+                <div class="col">
+                    <h1 class="p-5 m-5" style="text-align:center;font-family:'Nunito';color:white">
+                        MEET THE TEAM UNLOCKING THE FULL-POTENTIAL OF RO-SPACE
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
                 <div class="col d-flex justify-content-center">
-                    <div class="container">
-                        <div class="row my-3">
-                            <div class="col d-flex justify-content-center">
-                                <h2 class="p-2" style="font-family:'Arame-Mono';color:white;border: 1px solid rgb(127, 127, 127);border-radius:5px;">0</h2>
+                    <p class="p-2" style="color:white;font-family:'Nunito'">
+                        BOARD OF DIRECTORS
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container-fluid">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col col-sm-auto">
+                            <div class="container d-flex justify-content-center align-items-center flex-column">
+                                <div class="row">
+                                    <div class="col">
+                                        <img src="../assets/team_images/Osman.png" width="210" height="200">
+                                    </div>
+                                    
+                                </div>
+                                <div class="row w-100" style="background-color:rgb(30, 30, 30)">
+                                    <div class="col" style="display:inline-block;max-width:min-content;min-width:100%;">
+                                        <h6 class="py-3" style="padding-bottom:0%;color:white;font-family:'Nunito'">ronaldoENER123456</h6>
+                                        <h6 class="m-0 py-4" style="color:white;font-family:'Nunito'">Founder, Chief Executive Officer </h6>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col d-flex justify-content-center align-items-center">
-                                <p style="color:white;font-family:'Nunito'">SATELLITES LAUNCHED BY GENESIS</p>
+                        <div class="col col-sm-auto">
+                            <div class="container d-flex justify-content-center align-items-center flex-column">
+                                <div class="row">
+                                    <div class="col">
+                                        <img src="../assets/team_images/Isak.png" width="210" height="200">
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="row w-100" style="background-color:rgb(30, 30, 30)">
+                                    <div class="col" style="display:inline-block;max-width:min-content;min-width:100%;">
+                                        <h5 class="py-3" style="padding-bottom:0%;color:white;font-family:'Nunito'">Isak</h5>
+                                        <h6 class="m-0 py-4" style="color:white;font-family:'Nunito'">Co-Founder, Chief Operations Officer</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-sm-auto">
+                            <div class="container d-flex justify-content-center align-items-center flex-column">
+                                <div class="row">
+                                    <div class="col">
+                                        <img src="../assets/team_images/Solopia1.png" width="210" height="200">
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="row w-100" style="background-color:rgb(30, 30, 30)">
+                                    <div class="col" style="display:inline-block;max-width:min-content;min-width:100%;">
+                                        <h5 class="py-3" style="padding-bottom:0%;color:white;font-family:'Nunito'">Solopia1</h5>
+                                        <h6 class="m-0 py-4" style="color:white;font-family:'Nunito'">Chief of Human Resources/Programming</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-sm-auto">
+                            <div class="container d-flex justify-content-center align-items-center flex-column">
+                                <div class="row">
+                                    <div class="col">
+                                        <img src="../assets/team_images/Aervial.png" width="210" height="200">
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="row w-100" style="background-color:rgb(30, 30, 30)">
+                                    <div class="col" style="display:inline-block;max-width:min-content;min-width:100%;">
+                                        <h5 class="py-3" style="padding-bottom:0%;color:white;font-family:'Nunito'">Aervial</h5>
+                                        <h6 class="m-0 py-4" style="color:white;font-family:'Nunito'">Chief Administrative Officer</h6>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col d-flex justify-content-center">
-                    <div class="container">
-                        <div class="row my-3">
-                            <div class="col d-flex justify-content-center">
-                                <h2 class="p-2" style="font-family:'Arame-Mono';color:white;border: 1px solid rgb(127, 127, 127);border-radius:5px;">0</h2>
+                    <div class="row d-flex justify-content-center my-5">
+                        <div class="col col-sm-auto">
+                            <div class="container d-flex justify-content-center align-items-center flex-column" style="overflow:hidden;">
+                                <div class="row">
+                                    <div class="col">
+                                        <img src="../assets/team_images/Cruiser.png" width="210" height="200">
+                                    </div>
+                                    
+                                </div>
+                                <div class="row w-100" style="background-color:rgb(30, 30, 30)">
+                                    <div class="col" style="display:inline-block;max-width:min-content;min-width:100%;">
+                                        <h5 class="py-3" style="padding-bottom:0%;color:white;font-family:'Nunito'">CRUISER</h5>
+                                        <h6 class="m-0 py-4" style="color:white;font-family:'Nunito'">Chief Technical Officer </h6>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col d-flex justify-content-center align-items-center">
-                                <p style="color:white;font-family:'Nunito'">SATELLITES ON ORBIT WITH GENESIS TECHNOLOGY</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col d-flex justify-content-center">
-                    <div class="container">
-                        <div class="row my-3">
-                            <div class="col d-flex justify-content-center">
-                                <h2 class="p-2" style="font-family:'Arame-Mono';color:white;border: 1px solid rgb(127, 127, 127);border-radius:5px;">0</h2>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col d-flex justify-content-center align-items-center">
-                                <p style="color:white;font-family:'Nunito'">TOTAL LAUNCHES OF GENESIS SPACE</p>
+                        <div class="col col-sm-auto">
+                            <div class="container d-flex justify-content-center align-items-center flex-column">
+                                <div class="row">
+                                    <div class="col">
+                                        <img src="../assets/team_images/Popcat.png" width="210" height="200">
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="row w-100" style="background-color:rgb(30, 30, 30)">
+                                    <div class="col" style="display:inline-block;max-width:min-content;min-width:100%;">
+                                        <h5 class="py-3" style="padding-bottom:0%;color:white;font-family:'Nunito'">POPCAT</h5>
+                                        <h6 class="m-0 py-4" style="color:white;font-family:'Nunito'">Head of Software Engineering, Chief Engineer</h6>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         
@@ -177,11 +258,13 @@
                 </div>
             </div>
         </div>
+
         
         
-        <script src="scripts/navbar.js"></script>
-        <script src="scripts/responsive.js"></script>
-        <script src="scripts/pganim.js"></script>
+        
+        <script src="../scripts/navbar.js"></script>
+        <script src="../scripts/responsive.js"></script>
+        <script src="../scripts/pganim.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     </body>
 </html>
