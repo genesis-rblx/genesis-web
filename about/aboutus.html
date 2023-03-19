@@ -58,7 +58,20 @@
 
                 visibility: visible;
                 opacity: 1;
-                
+            }
+            #dsized-responsive {
+                padding: 10px;
+                outline: none;
+                box-shadow: none;
+                transition: text-shadow 0.3s ease-in-out;
+            }
+            #dsized-responsive:hover {
+                text-shadow: 0 0 5px white;
+                outline: 2px solid white;
+
+            }
+            #scroll-down {
+              cursor: pointer;
             }
             @keyframes arrow {
                 0% {
@@ -70,6 +83,9 @@
                  100% {
                 transform: translateY(0);
                 }
+            }
+            .no-hover {
+                pointer-events: none;
             }
         </style>
 
@@ -136,19 +152,19 @@
         </nav>
 
         <div style="position:relative;border-bottom: 1px solid red;" id="cover-image">
-            <img class="img-fluid" src="../assets/team_bg.png" style="filter: brightness(80%);" height="50%" width="100%">
-<h1 id="dsized-responsive" style="letter-spacing:10px;position:absolute;top:50%;left:50%;transform: translate(-50%, -50%);text-align:center;color:white;font-family:'Nulshock';font-size:40px;">
-      ABOUT US
-  </h1>
-    </div>
-
-
-        <div style="position:relative;border-bottom: 1px solid red;" id="scroll-down">
-    <h1 id="dsized-responsive" style="letter-spacing:5px;position:absolute;top:50%;left:50%;transform: translate(-50%, -1300%);text-align:center;color:white;font-family:'Arial';font-size:18px;">
-        SCROLL FOR MORE
-        <i data-feather="arrow-down" style="position: relative; top: 50px; right: 140px; animation: arrow 1s infinite;"></i>
-    </h1>
-</div>
+            <img class="img-fluid" src="../assets/team_bg.png" style="filter: brightness(80%); user-select: none;" height="50%" width="100%">
+            <h1 class="no-hover" id="dsized-responsive" style="letter-spacing:10px;position:absolute;top:50%;left:50%;transform: translate(-50%, -50%);text-align:center;color:white;font-family:'Nulshock';font-size:40px;">
+              ABOUT US
+            </h1>
+          </div>
+          
+          <div style="position:relative;border-bottom: 1px solid red;" id="scroll-down">
+            <h1 id="dsized-responsive" style="letter-spacing:5px;position:absolute;top:50%;left:50%;transform: translate(-50%, -750%);text-align:center;color:white;font-family:'Arial';font-size:18px;">
+              SCROLL FOR MORE
+              <i data-feather="arrow-down" style="position: relative; top: 50px; right: 140px; animation: arrow 1s infinite;"></i>
+            </h1>
+          </div>
+          
 
         <div class="container-fluid">
             <div class="row">
@@ -241,6 +257,29 @@
         <script>
             feather.replace()
           </script>
+<script>
+    var scrollDownSection = document.getElementById("scroll-down");
+    scrollDownSection.addEventListener("click", function() {
+      window.scroll({ top: document.body.scrollHeight, behavior: 'smooth' });
+    });
+  </script>
+  <script>
+    var isScrolling;
+    var lastScrollTop = 0;
+    window.addEventListener('scroll', function(event) {
+      window.clearTimeout(isScrolling);
+      isScrolling = setTimeout(function() {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop) {
+          window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
+          });
+        }
+        lastScrollTop = scrollTop;
+      }, 100);
+    }, false);
+  </script>
         <script src="../scripts/responsive.js"></script>
         <script src="../scripts/pganim.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
