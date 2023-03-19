@@ -8,7 +8,7 @@ function updateFormDropdown(text, id) {
 
 function postFormData() {
 
-    const mandatoryInput = [document.getElementById('Username'), document.getElementById('DiscordUsernameNTag'), document.getElementById('TargetLaunchDate'), document.getElementById('PayloadReadyDate'), document.getElementById('Inclination'), document.getElementById('Altitude')]
+    const mandatoryInput = [document.getElementById('Username'), document.getElementById('DiscordUsernameNTag'), document.getElementById('TargetLaunchDate'), document.getElementById('PayloadReadyDate'), document.getElementById('Inclination'), document.getElementById('Altitude'), document.getElementById('Mass'), document.getElementById("LaunchVehicleDropdownToggle"), document.getElementById("ExpansionBoolDropdownToggle"), document.getElementById("PayloadDesc")]
     
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "https://genesiswebsiteservice.shaperorblx.repl.co/", true);
