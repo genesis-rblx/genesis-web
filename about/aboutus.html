@@ -65,9 +65,20 @@
             }
             #dsized-responsive:hover {
                 text-shadow: 0 0 5px white;
-                outline: 2px solid white;
-
             }
+            #dsized-responsive:hover::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: -2px;
+                bottom: -2px;
+                left: -2px;
+                right: 25px;
+                border: 2px solid white;
+                box-shadow: 0 0 0 white;
+                z-index: -1;
+                transition: box-shadow 0.3s ease-in-out;
+        }
             #scroll-down {
               cursor: pointer;
             }
