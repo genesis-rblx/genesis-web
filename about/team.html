@@ -24,8 +24,6 @@
 
         <link rel="stylesheet" type="text/css" href="../assets/css/front.css"/> 
 
-        
-
         <style>
             #viewer-closebutton {
                 color: white;
@@ -35,6 +33,21 @@
             #viewer-closebutton:hover {
                 color: red;
                 border: 2px red solid;
+            }
+
+            .profile-hover {
+                display:block;
+                background-color:rgba(15, 15, 15, 0.5);
+                position:absolute;
+                transition: 0.5s;
+                opacity:0;
+                z-index:4;
+            }
+            
+            .profile-hover:hover {
+                
+                cursor: pointer;
+                opacity: 1;
             }
 
         </style>
@@ -50,11 +63,11 @@
             </div>
             <div class="d-flex justify-content-center align-items-top h-75">
                 <div class="col-4 mx-5">
-                    <img src="../assets/team_images/Osman.png" class="w-100">
+                    <img src="../assets/team_images/Osman.png" id="viewer-image" class="w-100">
                 </div>
                 <div class="col mx-5" class="w-100">
                     <div class="py-2" style="padding-bottom:0">
-                        <h1 style="color:white;font-family:'Nunito'" id="viewer-username">ronaldoENER123456</h1>
+                        <h1 style="color:white;font-family:'Nunito'" id="viewer-username"></h1>
                     </div>
                     <div class="py-5">
                         <p style="color:rgb(203, 203, 203);font-family:'Nunito'" id="viewer-description"></p>
@@ -151,6 +164,9 @@
                     <div class="row d-flex justify-content-center">
                         <div class="col col-sm-auto">
                             <div class="container d-flex justify-content-center align-items-center flex-column" style="position:relative">
+                                <div class="w-100 h-100 d-flex justify-content-center align-items-center profile-hover" onclick="display('Ron_1imited')">
+                                    <p style="color:white; font-family:'Nunito'">VIEW PROFILE</p>
+                                </div>
                                 <div class="row">
                                     <div class="col">
                                         <img src="../assets/team_images/Osman.png" width="210" height="200">
@@ -167,6 +183,9 @@
                         </div>
                         <div class="col col-sm-auto">
                             <div class="container d-flex justify-content-center align-items-center flex-column" style="position:relative">
+                                <div class="w-100 h-100 d-flex justify-content-center align-items-center profile-hover" onclick="display('PERISAKLARSSON')">
+                                    <p style="color:white; font-family:'Nunito'">VIEW PROFILE</p>
+                                </div>
                                 <div class="row">
                                     <div class="col">
                                         <img src="../assets/team_images/Isak.png" width="210" height="200">
@@ -183,6 +202,9 @@
                         </div>
                         <div class="col col-sm-auto">
                             <div class="container d-flex justify-content-center align-items-center flex-column" style="position:relative">
+                                <div class="w-100 h-100 d-flex justify-content-center align-items-center profile-hover" onclick="display('Solopia1')">
+                                    <p style="color:white; font-family:'Nunito'">VIEW PROFILE</p>
+                                </div>
                                 <div class="row">
                                     <div class="col">
                                         <img src="../assets/team_images/Solopia1.png" width="210" height="200">
@@ -200,6 +222,9 @@
                         </div>
                         <div class="col col-sm-auto">
                             <div class="container d-flex justify-content-center align-items-center flex-column" style="position:relative">
+                                <div class="w-100 h-100 d-flex justify-content-center align-items-center profile-hover" onclick="display('ItsAervial')">
+                                    <p style="color:white; font-family:'Nunito'">VIEW PROFILE</p>
+                                </div>
                                 <div class="row">
                                     <div class="col">
                                         <img src="../assets/team_images/Aervial.png" width="210" height="200">
@@ -218,12 +243,14 @@
                     </div>
                     <div class="row d-flex justify-content-center my-5">
                         <div class="col col-sm-auto">
-                            <div class="container d-flex justify-content-center align-items-center flex-column" style="overflow:hidden;" style="position:relative">
+                            <div class="container d-flex justify-content-center align-items-center flex-column"  style="position:relative">
+                                <div class="w-100 h-100 d-flex justify-content-center align-items-center profile-hover" onclick="display('mattyd8452')">
+                                    <p style="color:white; font-family:'Nunito'">VIEW PROFILE</p>
+                                </div>
                                 <div class="row">
                                     <div class="col">
                                         <img src="../assets/team_images/Cruiser.png" width="210" height="200">
                                     </div>
-                                    
                                 </div>
                                 <div class="row w-100" style="background-color:rgb(30, 30, 30)">
                                     <div class="col" style="display:inline-block;max-width:min-content;min-width:100%;">
@@ -250,16 +277,17 @@
                         
                         <div class="col col-sm-auto">
                             <div class="container d-flex justify-content-center align-items-center flex-column" style="position:relative">
+                                <div class="w-100 h-100 d-flex justify-content-center align-items-center profile-hover" onclick="display('GTAVandmore')">
+                                    <p style="color:white; font-family:'Nunito'">VIEW PROFILE</p>
+                                </div>
                                 <div class="row">
                                     <div class="col">
                                         <img src="../assets/team_images/Popcat.png" width="210" height="200">
                                     </div>
-                                    
                                 </div>
-
                                 <div class="row w-100" style="background-color:rgb(30, 30, 30)">
                                     <div class="col" style="display:inline-block;max-width:min-content;min-width:100%;">
-                                        <h5 class="py-3" style="padding-bottom:0%;color:white;font-family:'Nunito'">POPCAT</h5>
+                                        <h5 class="py-3" style="padding-bottom:0%;color:white;font-family:'Nunito'">GTAVandmore</h5>
                                         <h6 class="m-0 py-4" style="color:white;font-family:'Nunito'">Head of Software Engineering, Chief Engineer</h6>
                                     </div>
                                 </div>
