@@ -1,0 +1,19 @@
+.searchbox {
+    background-color:rgb(30, 30, 30);
+    border:none;
+    color:white;
+    font-family:'Nunito';
+}
+
+.searchbox::placeholder {
+    font-family: 'Nunito';
+}
+
+.searchbutton {
+    background-color:rgb(30, 30, 30);
+    border:none;
+}
+
+.searchbutton:hover {
+    background-color:rgb(46, 46, 46)
+}

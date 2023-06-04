@@ -1,0 +1,41 @@
+.dropdown-item-addon:hover {
+    background-color:black;
+}
+
+.dropdown-button-addon::after {
+    content: none;
+    border: 0;
+    border-width: 0;
+}
+
+#navbar-logo:hover {
+    cursor: pointer;
+}
+
+
+
+@font-face {
+    font-family: 'Nulshock';
+    src: url('../NulshockLt.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Arame-Mono';
+    src: url('../Arame-Mono.otf') format('opentype');
+}
+
+.anim-out {
+
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s;
+    opacity: 0;
+    
+}
+
+.anim-in {
+
+    visibility: visible;
+    opacity: 1;
+    
+}
