@@ -27,7 +27,7 @@ function callback() {
         }
 
         if (Job) {
-            if (!(Row.children[0].firstElementChild.innerText.toLowerCase().match(Job))) {
+            if (!(Row.children[0].firstElementChild.innerText.toLowerCase().match(Job.toLowerCase()))) {
                 show = false
             }
         }
