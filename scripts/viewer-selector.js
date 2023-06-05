@@ -24,7 +24,7 @@ const ImagePathmap = {
 }
 
 function close() {
-    Viewer.style.zIndex = 3
+    Viewer.style.zIndex = 0
     Viewer.style.opacity = 0;
 }
 
